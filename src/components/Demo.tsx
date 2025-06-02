@@ -96,18 +96,22 @@ const Demo: React.FC = () => {
                       alt="DataMate Demo Preview" 
                       className="absolute inset-0 w-full h-full object-cover opacity-70"
                     /> */}
-                    <iframe width="560" height="315" src="" title="YouTube video player" frameBorder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerPolicy="strict-origin-when-cross-origin" allowFullScreen></iframe>
                     <div className="w-20 h-20 bg-white/90 rounded-full flex items-center justify-center z-10 shadow-xl transition-transform transform hover:scale-110">
-                      <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center ml-1" style={{ backgroundColor: '#ff5959' }}>
+                      <div className="w-16 h-16 bg-primary-500 rounded-full flex items-center justify-center" style={{ backgroundColor: '#ff5959' }}>
                         <Play size={30} className="text-white ml-1" />
                       </div>
                     </div>
                   </div>
                 ) : (
-                  <div className="w-full h-full flex items-center justify-center bg-neutral-800 text-white">
-                    <p className="text-lg">Video would play here in production</p>
-                    {/* In a real implementation, this would be an iframe with the actual video */}
-                  </div>
+                  <iframe
+                    className="w-full h-full"
+                    src="https://www.youtube.com/embed/ER9iNUHiG6s?autoplay=1"
+                    title="YouTube video player"
+                    frameBorder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    referrerPolicy="strict-origin-when-cross-origin"
+                    allowFullScreen
+                  ></iframe>
                 )}
               </div>
               
